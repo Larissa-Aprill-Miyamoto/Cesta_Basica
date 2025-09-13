@@ -1,0 +1,94 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+
+// Declarando as variaveis do Arroz
+char item_arroz[] = "arroz";
+float preco_anterior_arroz = 20.00;
+float preco_atual_arroz = 22.50;
+
+//Formula para calcular a variação do arroz
+float variacao_arroz = ((preco_atual_arroz - preco_anterior_arroz) / preco_anterior_arroz) * 100;
+  char *situacao_arroz;
+  
+//Estrutura de condição para avaliar se a variação de preço teve: Aumento abusivo, se estava no Limite, se teve uma redução de preço ou se permaneceu estável
+    if (variacao_arroz >= 11) {
+            situacao_arroz = "Aumento abusivo";
+        } else if (variacao_arroz >= 10) {
+            situacao_arroz = "Limite de aumento";
+        } else if (variacao_arroz <= 10) {
+            situacao_arroz = "Redução de preço";
+        } else{
+            situacao_arroz = "Estável";
+            
+    }
+    
+   // Usei a mesma lógica de pensamento, a mesma formula e estruturas de condicionamento para fazer os outros itens
+ 
+ // Feijão 
+char item_feijao[] = "Feijão";
+float preco_anterior_feijao = 08.00;
+float preco_atual_feijao = 08.00;
+
+float variacao_feijao = ((preco_atual_feijao - preco_anterior_feijao) / preco_anterior_feijao) * 100;
+  char *situacao_feijao;
+  
+    if (variacao_feijao >= 11) {
+            situacao_feijao = "Aumento abusivo";
+        } else if (variacao_feijao >= 10) {
+            situacao_feijao = "Limite de aumento";
+        } else if (variacao_feijao <= 10) {
+            situacao_feijao = "Redução de preço";
+        } else{
+            situacao_feijao = "Estável";
+            
+    }
+    
+    
+// Óleo de Soja
+char item_oleo[] = "Óleo de Soja";
+float preco_anterior_oleo = 06.50;
+float preco_atual_oleo = 06.00;
+
+float variacao_oleo = ((preco_atual_oleo - preco_anterior_oleo) / preco_anterior_oleo) * 100;
+  char *situacao_oleo;
+  
+   if (variacao_oleo >= 11) {
+            situacao_oleo = "Aumento abusivo";
+        } else if (variacao_oleo >= 10) {
+            situacao_oleo = "Limite de aumento";
+        } else if (variacao_oleo <= 10) {
+            situacao_oleo = "Redução de preço";
+        } else{
+            situacao_oleo = "Estável";
+            
+    }
+    
+// Açúcar
+char item_acucar[] = "Açúcar";
+float preco_anterior_acucar = 04.00;
+float preco_atual_acucar = 04.40;
+
+float variacao_acucar = ((preco_atual_acucar - preco_anterior_acucar) / preco_anterior_acucar) * 100;
+  char *situacao_acucar;
+  
+   if (variacao_acucar >= 11) {
+            situacao_acucar = "Aumento abusivo";
+        } else if (variacao_acucar >= 10) {
+            situacao_acucar = "Limite de aumento";
+        } else if (variacao_acucar <= 10) {
+            situacao_acucar = "Redução de preço";
+        } else{
+            situacao_acucar = "Estável";
+            
+    }
+    
+// Exibir as informações dos preços tanto do mês atual quanto do mês anterior, a variação de preço e qual a situação dessa variação.
+    printf("Arroz | Preço no mês anterior (R$) %.2f | Preço no mês atual: R$ %.2f | Variação (%%) %.2f | Situação %s\n", preco_anterior_arroz, preco_atual_arroz, variacao_arroz, situacao_arroz);
+    printf("Feijão | Preço no mês anterior (R$) %.2f | Preço no mês atual: R$ %.2f | Variação (%%) %.2f | Situação %s\n", preco_anterior_feijao, preco_atual_feijao, variacao_feijao, situacao_feijao);
+    printf("Óleo de Soja | Preço no mês anterior (R$) %.2f | Preço no mês atual: R$ %.2f | Variação (%%) %.2f | Situação %s \n", preco_anterior_oleo, preco_atual_oleo, variacao_oleo, situacao_oleo);
+    printf("Açúcar | Preço no mês anterior (R$) %.2f | Preço no mês atual: R$ %.2f | Variação (%%) %.2f | Situação %s \n", preco_anterior_acucar, preco_atual_acucar, variacao_acucar, situacao_acucar);
+    return 0;
+}
